@@ -26,11 +26,11 @@ def internal_server_error(e):
 def index():
      return render_template('index.html', current_time=datetime.utcnow())
 
-@app.route('/user/<name>/<pront>/<inst>')
+@app.route('/user/Marcelo Baldavia/PT3019021/IFSP')
 def user():
     return render_template('user.html', name=name, pront=pront, inst=inst)
 
-@app.route('/contextorequisicao/<name>')
+@app.route('/contextorequisicao/Marcelo Baldavia')
 def contexto():
     user_agent = request.headers.get('User-Agent')
     url = request.host_url
