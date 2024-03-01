@@ -8,6 +8,9 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 
+name="Marcelo Baldavia"
+pront = "PT3019021"
+inst = "IFSP"
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -23,7 +26,7 @@ def internal_server_error(e):
 def index():
      return render_template('index.html', current_time=datetime.utcnow())
 
-@app.route('/user/<name>/<pront>/inst')
+@app.route('/user/<name>/<pront>/<inst>')
 def user():
     return render_template('user.html', name=name, pront=pront, inst=inst)
 
