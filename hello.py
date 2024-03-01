@@ -26,9 +26,9 @@ def index():
 def user(name, pront, inst):
     return render_template('user.html', name=name, pront=pront, inst=inst)
 
-@app.route('/contextorequisicao/Marcelo Baldavia')
-def contexto():
+@app.route('/contextorequisicao/<name>')
+def context(name):
     user_agent = request.headers.get('User-Agent')
     url = request.host_url
     ip = request.remote_addr
-    return render_template('context.html', user_agent=user_agent, url=url, ip=ip)
+    return render_template('context.html', user_agent=user_agent, url=url, ip=ip, name=name)
