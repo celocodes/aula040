@@ -25,7 +25,7 @@ def index():
 
 @app.route('/user/<name>/<pront>/inst')
 def user():
-    return render_template('user.html', name=name, pronst=pronst, inst=inst)
+    return render_template('user.html', name=name, pront=pront, inst=inst)
 
 @app.route('/contextorequisicao/<name>')
 def contexto():
