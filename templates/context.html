@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Flasky{% endblock %}
+{% block title %}Avaliação contínua: Aula 040{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <h2>Seu navegador é: {{user_agent}}</h2><h2>O IP do computador remoto é: {{ip}}</h2><h2>O host da aplicação é: {url}</h2>'.format(user_agent, ip, url)
+    <h1>Olá, {{name}}</h1>
+</div>
+<div class="page-content">
+    <h2>Seu navegador é: {{user_agent}}</h2>
+    <h2>O IP do computador remoto é: {{ip}}</h2>
+    <h2>O host da aplicação é: {url}</h2>
 </div>
 {% endblock %}
